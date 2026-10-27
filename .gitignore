@@ -1,0 +1,14 @@
+# Python virtual environment
+.venv/
+env/
+ENV/
+__pycache__/
+*.pyc
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Intermediate/temporary JSON dumps
+report_data.json
