@@ -2,7 +2,7 @@
 
 ## Project Purpose
 
-This project predicts the compressive strength of concrete using a Multiple Linear Regression model. It is part of an Artificial Intelligence and Machine Learning Experiential Learning assignment (20 marks — CO2 and CO3).
+This project predicts the compressive strength of concrete using a Multiple Linear Regression model and includes an interactive web dashboard built with Streamlit. It is part of an Artificial Intelligence and Machine Learning Experiential Learning assignment (20 marks — CO2 and CO3).
 
 ## Dataset Source
 
@@ -28,6 +28,7 @@ https://doi.org/10.24432/C5PK67.
 concrete-strength-ml/
 ├── dataset/
 │   └── concrete_data.csv          # Genuine UCI dataset (1,030 records)
+├── app.py                             # Interactive Streamlit prediction dashboard
 ├── concrete_strength_analysis.ipynb   # Complete Jupyter notebook with outputs
 ├── concrete_strength_report.docx      # 2–3 page academic report
 ├── scatter_plot.png                   # Scatter plot (Cement vs. Strength)
@@ -69,6 +70,24 @@ source .venv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
+
+## How to Launch the Streamlit Dashboard
+
+Run the following command from the project root directory:
+
+```bash
+streamlit run app.py
+```
+
+The web dashboard will automatically open in your default browser at `http://localhost:8501`.
+
+### Dashboard Features:
+- **Two-Column Input Layout:** Enter mix ingredients and curing age with sensible default values.
+- **Instant Predictions:** Generates strength predictions using the project's genuine Linear Regression model.
+- **Metric Cards:** Displays predicted strength alongside true held-out test set metrics (MAE: 8.90 MPa, R²: 0.5802).
+- **Illustrative Strength Category:** Highlights Low (<20 MPa), Moderate (20–40 MPa), or High (>40 MPa) categories.
+- **Performance Chart:** Compares predicted vs. actual compressive strength for 5 test-set batches.
+- **Reset Button:** Easily resets values back to the default example mix design.
 
 ## How to Run the Notebook
 
